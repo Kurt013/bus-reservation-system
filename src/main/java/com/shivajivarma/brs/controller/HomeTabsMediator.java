@@ -5,11 +5,13 @@ import java.awt.event.ActionEvent;
 import javax.swing.event.ChangeEvent;
 
 import com.shivajivarma.brs.model.service.TicketMasterService;
-import com.shivajivarma.brs.ui.CancellationTabView;
-import com.shivajivarma.brs.ui.HomeTabsPanelView;
-import com.shivajivarma.brs.ui.ReservationHistoryTabView;
-import com.shivajivarma.brs.ui.ReservationTabView;
-import com.shivajivarma.brs.ui.View;
+import com.shivajivarma.brs.view.CancellationTabView;
+import com.shivajivarma.brs.view.HomeTabsPanelView;
+import com.shivajivarma.brs.view.ReservationHistoryTabView;
+import com.shivajivarma.brs.view.ReservationTabView;
+import com.shivajivarma.brs.view.View;
+import com.shivajivarma.brs.view.adapters.ActionAdapter;
+import com.shivajivarma.brs.view.adapters.ChangeAdapter;
 
 public class HomeTabsMediator implements Controller{
 	

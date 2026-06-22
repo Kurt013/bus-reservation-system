@@ -3,14 +3,15 @@ package com.shivajivarma.brs.controller;
 import java.awt.event.ActionEvent;
 import java.util.List;
 
+import com.shivajivarma.brs.view.adapters.ActionAdapter;
 import org.springframework.dao.EmptyResultDataAccessException;
 
 import com.shivajivarma.brs.model.Model;
 import com.shivajivarma.brs.model.entity.Bus;
 import com.shivajivarma.brs.model.entity.Route;
 import com.shivajivarma.brs.model.service.BusService;
-import com.shivajivarma.brs.ui.BusSelectionView;
-import com.shivajivarma.brs.ui.View;
+import com.shivajivarma.brs.view.BusSelectionView;
+import com.shivajivarma.brs.view.View;
 
 public class BusSelectionController implements Controller{
 	

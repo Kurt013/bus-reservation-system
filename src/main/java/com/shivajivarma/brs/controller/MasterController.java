@@ -5,13 +5,13 @@ import com.shivajivarma.brs.model.entity.Bus;
 import com.shivajivarma.brs.model.entity.TicketMaster;
 import com.shivajivarma.brs.model.service.TicketMasterService;
 import com.shivajivarma.brs.model.service.Service;
-import com.shivajivarma.brs.ui.BannerViewPanel;
-import com.shivajivarma.brs.ui.BusSelectionView;
-import com.shivajivarma.brs.ui.HomeTabsPanelView;
-import com.shivajivarma.brs.ui.LoginPanelView;
-import com.shivajivarma.brs.ui.MasterView;
-import com.shivajivarma.brs.ui.SeatSelectionView;
-import com.shivajivarma.brs.ui.View;
+import com.shivajivarma.brs.view.BannerViewPanel;
+import com.shivajivarma.brs.view.BusSelectionView;
+import com.shivajivarma.brs.view.HomeTabsPanelView;
+import com.shivajivarma.brs.view.LoginPanelView;
+import com.shivajivarma.brs.view.MasterView;
+import com.shivajivarma.brs.view.SeatSelectionView;
+import com.shivajivarma.brs.view.View;
 
 
 public class MasterController implements Controller{

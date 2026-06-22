@@ -4,12 +4,13 @@ import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.shivajivarma.brs.view.adapters.ActionAdapter;
 import org.springframework.dao.EmptyResultDataAccessException;
 
 import com.shivajivarma.brs.model.bean.ReservationBean;
 import com.shivajivarma.brs.model.service.ReserveService;
-import com.shivajivarma.brs.ui.ReservationHistoryTabView;
-import com.shivajivarma.brs.ui.View;
+import com.shivajivarma.brs.view.ReservationHistoryTabView;
+import com.shivajivarma.brs.view.View;
 
 
 public class ReservationHistoryController implements Controller {

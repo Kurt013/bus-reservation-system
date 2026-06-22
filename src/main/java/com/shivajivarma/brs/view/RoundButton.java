@@ -1,4 +1,4 @@
-package com.shivajivarma.brs.ui;
+package com.shivajivarma.brs.view;
 
 import com.shivajivarma.brs.utility.ViewComponentFactory;
 

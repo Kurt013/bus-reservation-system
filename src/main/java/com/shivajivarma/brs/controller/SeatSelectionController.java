@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.swing.JCheckBox;
 
+import com.shivajivarma.brs.view.adapters.ActionAdapter;
 import org.springframework.dao.EmptyResultDataAccessException;
 
 import com.shivajivarma.brs.model.Model;
@@ -14,9 +15,9 @@ import com.shivajivarma.brs.model.entity.Bus;
 import com.shivajivarma.brs.model.entity.Reserve;
 import com.shivajivarma.brs.model.entity.Route;
 import com.shivajivarma.brs.model.service.ReserveService;
-import com.shivajivarma.brs.ui.Alert;
-import com.shivajivarma.brs.ui.SeatSelectionView;
-import com.shivajivarma.brs.ui.View;
+import com.shivajivarma.brs.view.Alert;
+import com.shivajivarma.brs.view.SeatSelectionView;
+import com.shivajivarma.brs.view.View;
 import com.shivajivarma.brs.utility.DateUtil;
 import com.shivajivarma.brs.utility.constants.Messages;
 

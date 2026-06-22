@@ -3,7 +3,7 @@ package com.shivajivarma.brs;
 import java.awt.EventQueue;
 
 
-import com.shivajivarma.brs.ui.MasterView;
+import com.shivajivarma.brs.view.MasterView;
 
 
 public class AppLauncher {

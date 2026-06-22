@@ -2,13 +2,14 @@ package com.shivajivarma.brs.controller;
 
 import java.awt.event.ActionEvent;
 
+import com.shivajivarma.brs.view.adapters.ActionAdapter;
 import org.springframework.dao.EmptyResultDataAccessException;
 
 import com.shivajivarma.brs.model.entity.Reserve;
 import com.shivajivarma.brs.model.service.ReserveService;
-import com.shivajivarma.brs.ui.Alert;
-import com.shivajivarma.brs.ui.CancellationTabView;
-import com.shivajivarma.brs.ui.View;
+import com.shivajivarma.brs.view.Alert;
+import com.shivajivarma.brs.view.CancellationTabView;
+import com.shivajivarma.brs.view.View;
 import com.shivajivarma.brs.utility.constants.Messages;
 
 public class CancellationController implements Controller{

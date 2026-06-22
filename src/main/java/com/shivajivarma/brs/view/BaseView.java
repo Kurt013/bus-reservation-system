@@ -1,4 +1,4 @@
-package com.shivajivarma.brs.ui;
+package com.shivajivarma.brs.view;
 
 import java.util.ArrayList;
 
