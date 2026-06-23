@@ -2,122 +2,92 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.shivajivarma</groupId>
+	<groupId>com.kurt</groupId>
 	<artifactId>brs</artifactId>
-	<version>2.1</version>
+	<version>3.0</version>
 
 	<name>JAC Liner Bus Reservation System</name>
-	<description>Final project.</description>
+	<description>
+		A Java-based bus reservation system for JAC Liner (mock company, no official partnership; for academic purposes only). This was one of our academic projects that I refactored and improved out of personal curiosity to enhance maintainability, code structure, and overall design. The system follows the MVC architecture and supports bus schedule management, seat reservations, and booking processes, with a focus on clean code practices and modular development.
+	</description>
 
-	<properties>
-		<!-- Generic properties -->
-		<java.version>22</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>5.3.34</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 
-		<!-- Spring -->
-		<spring-framework.version>4.0.2.RELEASE</spring-framework.version>
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>junit-bom</artifactId>
+				<version>5.10.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
-		<!-- Logging -->
-		<logback.version>1.2.0</logback.version>
-		<slf4j.version>1.7.5</slf4j.version>
-
-		<!-- Junit -->
-		<junit.version>4.12</junit.version>
-	</properties>
 
 	<dependencies>
 		<!-- Spring and Transactions -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>${spring-framework.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>${spring-framework.version}</version>
 		</dependency>
 
 		<!-- Spring JDBC Support -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>${spring-framework.version}</version>
 		</dependency>
 
 		<!-- Logging with SLF4J & LogBack -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-			<scope>compile</scope>
+			<version>2.0.13</version>
 		</dependency>
+
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-			<scope>runtime</scope>
+			<version>1.5.13</version>
 		</dependency>
 
 		<!-- JUNIT -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
 		</dependency>
 
-		<!-- ORACLE Driver -->
+		<!-- SQLite Driver -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.28</version>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.46.1.0</version>
 		</dependency>
-		
+
 	</dependencies>
 
-	<build>
-		<plugins>
-			<!-- download source code in Eclipse, best practice -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>false</downloadJavadocs>
-				</configuration>
-			</plugin>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>com.shivajivarma.brs.AppLauncher</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
-</project>
+		<build>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.11.0</version>
+					<configuration>
+						<release>17</release>
+					</configuration>
+				</plugin>
+			</plugins>
+		</build>
+	</project>

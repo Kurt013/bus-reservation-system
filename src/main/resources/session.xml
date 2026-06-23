@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     spring-schemas/spring-beans-3.0.xsd">
 
-   <bean id="passengerController" class="com.shivajivarma.brs.PassengerController" 
+   <bean id="passengerController" class="com.kurt.brs.PassengerController"
       scope="singleton">
    </bean>
 

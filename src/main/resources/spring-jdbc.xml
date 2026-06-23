@@ -3,32 +3,29 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans spring-schemas/spring-beans.xsd">
     
-    <bean id="ticketmasterDAO" class="com.shivajivarma.brs.model.dao.TicketMasterDAOImpl">
+    <bean id="ticketmasterDAO" class="com.kurt.brs.model.dao.TicketMasterDAOImpl">
         <property name="dataSource" ref="dataSource" />
     </bean>
     
-    <bean id="reserveDAO" class="com.shivajivarma.brs.model.dao.ReserveDAOImpl">
+    <bean id="reserveDAO" class="com.kurt.brs.model.dao.ReserveDAOImpl">
         <property name="dataSource" ref="dataSource" />
     </bean>
     
-    <bean id="reservationDAO" class="com.shivajivarma.brs.model.dao.ReservationDAOImpl">
+    <bean id="reservationDAO" class="com.kurt.brs.model.dao.ReservationDAOImpl">
         <property name="dataSource" ref="dataSource" />
     </bean>
     
-    <bean id="busDAO" class="com.shivajivarma.brs.model.dao.BusDAOImpl">
+    <bean id="busDAO" class="com.kurt.brs.model.dao.BusDAOImpl">
         <property name="dataSource" ref="dataSource" />
     </bean>
     
-    <bean id="routeDAO" class="com.shivajivarma.brs.model.dao.RouteDAOImpl">
+    <bean id="routeDAO" class="com.kurt.brs.model.dao.RouteDAOImpl">
         <property name="dataSource" ref="dataSource" />
     </bean>
-    
-     
+
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/brs" />
-        <property name="username" value="root" />
-        <property name="password" value="" />
+        <property name="driverClassName" value="org.sqlite.JDBC" />
+        <property name="url" value="jdbc:sqlite:brs.db" />
     </bean>
  
 </beans>
